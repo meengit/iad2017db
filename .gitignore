@@ -61,3 +61,6 @@ Temporary Items
 #
 
 mysql/database
+wordpress/config/*
+wordpress/data/*
+wordpress/database/*
