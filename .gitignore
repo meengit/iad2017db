@@ -60,7 +60,11 @@ Temporary Items
 # PROJECT
 #
 
-mysql/database
+mysql/database/*
+!mysql/database/.env
 wordpress/config/*
+!wordpress/config/.env
 wordpress/data/*
+!wordpress/data/.env
 wordpress/database/*
+!wordpress/database/.env
