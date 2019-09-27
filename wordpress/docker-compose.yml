@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - ./database:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+     networks:
+       - wpenv
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+     volumes:
+       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+       - ./data:/var/www/html
+     networks:
+       - wpenv
+     links:
+       - db:db
+   phpmyadmin:
+     depends_on:
+       - db
+     image: phpmyadmin/phpmyadmin
+     restart: always
+     ports:
+       - '8080:80'
+     environment:
+       PMA_HOST: db
+       PMA_PORT: 3306
+       MYSQL_ROOT_PASSWORD: "root"
+     links:
+       - db:db
+     networks:
+       - wpenv
+networks:
+  wpenv:
+volumes:
+  database: {}
+  config: {}
+  data: {}
