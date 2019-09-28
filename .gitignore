@@ -68,3 +68,6 @@ wordpress/data/*
 !wordpress/data/.env
 wordpress/database/*
 !wordpress/database/.env
+
+node_modules
+
