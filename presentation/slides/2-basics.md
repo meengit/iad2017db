@@ -48,3 +48,19 @@
 
 Quelle: <https://www.bmc.com/blogs/dbms-database-management-systems/>
 
+---
+
+## SQL
+
+![SQL](images/sqltables.png)
+
+Quelle: <https://launchschool.com/books/sql/read/table_relationships>
+
+---
+
+## NoSQL
+
+![NoSQL Types](images/nosql.jpg)
+
+Quelle: <https://www.lynda.com/NoSQL-tutorials/5-categories-NoSQL-databases/368756/387725-4.html>
+

@@ -49,3 +49,24 @@ Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in
 ![Normalisierung Stufe 3, richtig](images/normalization-3.ok.png)
 
 ---
+
+## Beziehungen
+
+---
+
+### 1:1 – eins zu eins; 
+
+*Jeder Datensatz in Tabelle A ist genau einem Datensatz in Tabelle B zugeordnet.*
+
+---
+
+### 1:n – eins zu viele;
+
+*Der häufigste Beziehungstyp in relationalen Datenbanken; In einer 1:n-Beziehung können einem Datensatz in Tabelle A mehrere passende Datensätze in Tabelle B zugeordnet sein – aber einem Datensatz in Tabelle B ist nie mehr als ein Datensatz in Tabelle A zugeordnet.*
+
+---
+
+### m:n – viele zu viele;
+
+*Jedem Datensatz in Tabelle A können mehrere passende Datensätze in Tabelle B zugeordnet sein und umgekehrt.*
+
